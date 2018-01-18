@@ -1,0 +1,16 @@
+{
+  "name": "v-toggle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "bootstrap-toggle": "^2.2.2",
+    "vue": "^2.5.13"
+  }
+}
