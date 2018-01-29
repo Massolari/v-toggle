@@ -12,15 +12,13 @@ Vue.component('v-toggle', {
         return {
             onText: this.on || "Sim",
             offText: this.off || "Não",
-            currentStatus: (this.status === (this.onValue || true)),
             onVal: this.onValue || true,
             offVal: this.offValue || false
         }
     },
     methods: {
         toggleValue() {
-            this.currentStatus = !this.currentStatus
-            this.$emit('change', (this.currentStatus) ? this.onVal : this.offVal)
+            this.$emit('change', (!this.currentStatus) ? this.onVal : this.offVal)
         }
     },
     computed: {
@@ -29,6 +27,9 @@ Vue.component('v-toggle', {
                 'btn-primary': this.currentStatus,
                 'btn-default off': !this.currentStatus
             }
+        },
+        currentStatus() {
+            return (this.status === (this.onValue || true))
         }
     }
 })
